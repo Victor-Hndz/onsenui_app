@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onsenui/css/onsenui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onsenui/css/onsen-css-components.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <ons-page>
+        <ons-toolbar>
+            <div class="center" id="texto-center">Contador en Onsen UI</div>
+        </ons-toolbar>
+        <div id="main-space">
+            <div class="center-logo">
+                <a href="https://onsen.io/" target="_blank">
+                  <img src="img/onsen_logo.png" width="100">
+                </a>
+            </div>
+            
+            <div class="counter-container">
+                <h2>Contador</h2>
+                <span id="count">0</span>
+            </div>
+            <div class="container">
+                <div class="botones">
+                    <ons-button id="decrement" onclick="return decrementar()">-</ons-button>
+                    <ons-button id="increment" onclick="return incrementar()">+</ons-button>
+                </div>
+                
+                <div class="center">
+                    <ons-input id="input-number" type="number" placeholder="0" value="0" class="input-small"></ons-input>
+                    <ons-button id="reset" onclick="return reset()">REINICIAR</ons-button>
+                </div>
+                <div class="center">
+                    <ons-list-item class="list-item-per">
+                        <div class="left">
+                            <h4>Negativos</h4>
+                        </div>
+                        <div class="right">
+                            <ons-switch id="check" onclick="return check()"></ons-switch>
+                        </div>
+                    </ons-list-item>
+                </div>
+            </div>
+        </div>
+    </ons-page>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
